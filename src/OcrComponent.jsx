@@ -3,11 +3,11 @@ import Tesseract from 'tesseract.js';
 import { Form, ImageComponent, Loader } from './components'
 
 const OcrComponent = () => {
-    const [image, setImage] = useState(null);
-    const [textLines, setTextLines] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const canvasRef = useRef(null);
-    const [progress, setProgress] = useState(0);
+    const [image, setImage] = useState(null);// save image URL
+    const [textLines, setTextLines] = useState([]);//save the text from Tesseract
+    const [loading, setLoading] = useState(false);// save the loading indicator
+    const canvasRef = useRef(null);// reference to canvas 
+    const [progress, setProgress] = useState(0);// save the progress indicator
 
     const handleImageUpload = (event) => {
         // to handle image
